@@ -17,13 +17,23 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/">Главная</nuxt-link>
+            <nuxt-link exact active-class="active" class="nav-link" to="/"
+              >Главная</nuxt-link
+            >
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/users">Пользователи</nuxt-link>
+            <nuxt-link
+              no-prefetch
+              active-class="active"
+              class="nav-link"
+              to="/users"
+              >Пользователи</nuxt-link
+            >
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/about">О программе</nuxt-link>
+            <nuxt-link active-class="active" class="nav-link" to="/about"
+              >О программе</nuxt-link
+            >
           </li>
         </ul>
       </div>
