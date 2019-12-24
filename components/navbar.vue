@@ -35,6 +35,11 @@
               >О программе</nuxt-link
             >
           </li>
+          <li class="nav-item">
+            <nuxt-link active-class="active" class="nav-link" to="/login"
+              >Логин</nuxt-link
+            >
+          </li>
         </ul>
       </div>
     </nav>
