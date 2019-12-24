@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Пользователи</h1>
+    <h1>{{ pageTitle }}</h1>
     <ul>
       <li v-for="user of users" :key="user">
         <a href="#" @click.prevent="goto(user)">User: {{ user }}</a>
@@ -11,9 +11,20 @@
 
 <script>
 export default {
-  data: () => ({
-    users: [1, 2, 3, 4, 5]
-  }),
+  asyncData() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve({
+          users: [1, 2, 3, 4, 5]
+        });
+      }, 3000);
+    });
+  },
+  data() {
+    return {
+      pageTitle: "Пользователи"
+    };
+  },
   methods: {
     goto(user) {
       this.$router.push("/users/" + user);
