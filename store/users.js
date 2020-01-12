@@ -12,7 +12,7 @@ export const actions = {
   async fetchUsers({ commit }) {
     try {
       const users = await this.$axios.$get(
-        "http://jsonplaceholder.typicode.com/users"
+        "https://jsonplaceholder.typicode.com/users"
       );
       commit("setUsers", users);
     } catch (e) {
@@ -22,7 +22,7 @@ export const actions = {
   async fetchUserById({}, userId) {
     try {
       return await this.$axios.$get(
-        `http://jsonplaceholder.typicode.com/users/${userId}`
+        `https://jsonplaceholder.typicode.com/users/${userId}`
       );
     } catch (e) {
       throw e;
