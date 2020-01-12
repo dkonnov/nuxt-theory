@@ -26,7 +26,6 @@ export default {
       pageTitle: "Пользователи"
     };
   },
-  computed: {},
   methods: {
     goto(user) {
       this.$router.push("/users/" + user.id);
